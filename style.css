@@ -1,0 +1,115 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, a {
+  background-color: mintcream;
+  display: flexbox;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+h2 > a {
+  text-align: center;
+  text-decoration: none;
+  color: turquoise;
+}
+
+hr {
+  margin-inline-start: 4px;
+  margin-inline-end: 4px;
+}
+
+.ton {
+  text-align: center;
+  color: deepskyblue;
+  margin: auto;
+  font-size: large;
+  font-family: cursive;
+}
+
+.t-image {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+
+.okx {
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: larger;
+  font-family: cursive;
+}
+
+.ok-image {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+.meta {
+  text-align: center;
+  color: darkorange;
+  margin: auto;
+  font-size: large;
+  font-family: cursive;
+}
+
+.meta-image {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+details {
+  padding: 4px 20px;
+}
+
+details > summary {
+  color: dimgray;
+  width: 14em;
+  border: none;
+  cursor: pointer;
+}
+
+details[open] > summary {
+  color: dodgerblue;
+}
+
+ul li::marker {
+  color: lightslategray;
+}
+
+.t-icon::before {
+  content: url(./pic/telegram.svg);
+  display: inline-block;
+}
+
+ul.tk {
+  list-style-type: square;
+}
+
+code {
+  color: midnightblue;
+  background-color: azure;
+  border-radius: 50%;
+}
+
+code:hover {
+  content: url(./pic/scan.png);
+  display: flexbox;
+  margin: auto;
+  width: 17px;
+  height: 17px;
+}

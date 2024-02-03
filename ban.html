@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="12;url=https://t.me/QD_ton" />
+  <title>open on Mobile!</title>
+  <style>
+    body {
+      background-image: url(./pic/ban.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    img {
+      width: 12px;
+    }
+    .post {
+      text-align: center;
+      margin: auto;
+      color: whitesmoke;
+    }
+    .post:hover {
+      color: firebrick;
+    }
+    .message {
+      margin: auto;
+      text-align: center;
+      color: indigo;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      function updateBatteryStatus(battery) {
+        var charging = document.querySelector('#charging');
+        var level = document.querySelector('#level');
+        if(battery.charging) {
+          charging.textContent = '⚡ Charging';
+          charging.style.color = 'green';
+        } else {
+          charging.textContent = '🔌 Unplugged';
+          charging.style.color = 'red';
+        }
+        level.style.fontWeight = 'bold';
+        level.textContent = '🔋 '+Math.round(battery.level*100)+' %';
+      }
+      navigator.getBattery().then(function(battery) {
+        updateBatteryStatus(battery);
+        battery.onchargingchange = function() {
+          updateBatteryStatus(battery);
+        }
+        battery.onlevelchange = function() {
+          updateBatteryStatus(battery);
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <p id="message" class="message"></p>
+  <div id="charging">...</div>
+  <div id="level">..</div>
+  <br>
+  <h3 style="text-align: center;">please, use Mobile device!</h3>
+  <p style="text-align: center">your phone needs work on <img src="./pic/Android.svg"> or <img src="./pic/Apple.svg">,<br>else you  cannot use it.</p>
+
+  <marquee behavior="scroll" direction="right" loop="1">🐱‍🏍
+  <marquee behavior="scroll" direction="left" loop="1">🖥💻🖱</marquee>
+  </marquee>
+  <p class="post">this page will close soon...</p>
+  <script>
+setTimeout(() => {
+  document.getElementById("message").textContent = "bye... 🚀";
+  setTimeout(() => window.close(), 2000);
+}, 10000);
+  </script>
+</body>
+</html>
