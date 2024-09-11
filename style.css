@@ -13,10 +13,15 @@ header {
   text-align: center;
 }
 
+button {
+  float: right;
+  margin-top: 4px;
+}
+
 h2 > a {
   text-align: center;
   text-decoration: none;
-  color: turquoise;
+  color: darkgreen;
 }
 
 hr {
