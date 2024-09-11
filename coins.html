@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryptocurrencies</title>
   <style>
-    body:read-only {
+    body {
       user-select: none;
       -webkit-user-select: none;
+    }
+    a {
+      text-decoration: none;
     }
     h3 {
       text-align: center;
@@ -23,7 +26,7 @@
 </head>
 <body>
   <h3 id="tb">TON blockchain</h3>
-  <button href="/index.html">⇦ back</button>
+  <button><a href="/index.html">⇦ back</a></button>
   <br><br>
   <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
   <gecko-coin-list-widget locale="en" dark-mode="true" outlined="true" coin-ids="the-open-network,notcoin,duckcoin,ston-2,scaleton,gram-2" initial-currency="usd"></gecko-coin-list-widget>
