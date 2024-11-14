@@ -132,6 +132,7 @@ ul li::marker {
 .t-icon::before {
   content: url(./pic/telegram.svg);
   display: inline-block;
+  filter: grayscale(100);
 }
 
 ul.tk {
