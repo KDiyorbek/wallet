@@ -21,7 +21,7 @@ button {
 h2 > a {
   text-align: center;
   text-decoration: none;
-  color: darkgreen;
+  color: #000000;
 }
 
 hr {
@@ -106,11 +106,16 @@ hr {
   height: 60px;
 }
 
+.line {
+  border-color: rgb(240, 240, 240);
+  border-style: dashed;
+}
+
 .token > p {
   text-align: center;
 }
 
-details {
+details, .bitcoin-blockchain {
   padding: 4px 20px;
 }
 
@@ -127,6 +132,10 @@ details[open] > summary {
 
 ul li::marker {
   color: lightslategray;
+}
+
+.send-bot > a {
+  color: currentColor;
 }
 
 .t-icon::before {
@@ -151,4 +160,10 @@ code:hover {
   margin: auto;
   width: 17px;
   height: 17px;
+}
+
+mark {
+  border-radius: 5px;
+  color: darkslategrey;
+  background-color: transparent;
 }
