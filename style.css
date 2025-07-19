@@ -106,6 +106,12 @@ hr {
   height: 60px;
 }
 
+.bit > img, .tet > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
 .line {
   border-color: rgb(240, 240, 240);
   border-style: dashed;
@@ -117,6 +123,7 @@ hr {
 
 details, .bitcoin-blockchain {
   padding: 4px 20px;
+  width: 100%;
 }
 
 details > summary {
@@ -141,7 +148,7 @@ ul li::marker {
 .t-icon::before {
   content: url(./pic/telegram.svg);
   display: inline-block;
-  filter: grayscale(100);
+  filter: grayscale(0);
 }
 
 ul.tk {
@@ -166,4 +173,8 @@ mark {
   border-radius: 5px;
   color: darkslategrey;
   background-color: transparent;
+}
+
+.bit, .tet {
+  text-align: center;
 }
