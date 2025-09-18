@@ -3,8 +3,8 @@
   padding: 0px;
 }
 
-body, a {
-  background-color: mintcream;
+body {
+  background-color: white;
   display: flexbox;
   text-decoration: none;
 }
@@ -37,21 +37,21 @@ hr {
   font-family: cursive;
 }
 
-.t-image {
+.t-coin > img {
   display: flex;
-  justify-content: center;
   margin: auto;
-  width: 40px;
-  height: 40px;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 .t-image:hover {
   content: url(./pic/not.webp);
-  display: flexbox;
+  display: flex;
   margin: auto;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
 }
 
 .okx {
@@ -66,16 +66,15 @@ hr {
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
 }
 
 .ok-image:hover {
   content: url(./pic/okx.png);
-  display: flexbox;
-  margin: auto;
+  display: flex;
   width: 25%;
-  height: 50px;
+  height: 40px;
 }
 
 .ok-coin > p {
@@ -103,7 +102,8 @@ hr {
   display: flexbox;
   margin: auto;
   width: 20%;
-  height: 60px;
+  height: 65px;
+  border-radius: 20%;
 }
 
 .bit > img, .tet > img {
@@ -113,7 +113,7 @@ hr {
 }
 
 .line {
-  border-color: rgb(240, 240, 240);
+  border-color: antiquewhite;
   border-style: dashed;
 }
 
@@ -128,7 +128,7 @@ details, .bitcoin-blockchain {
 
 details > summary {
   color: dimgray;
-  width: 14em;
+  width: 70%;
   border: none;
   cursor: pointer;
 }
@@ -147,8 +147,8 @@ ul li::marker {
 
 .t-icon::before {
   content: url(./pic/telegram.svg);
-  display: inline-block;
-  filter: grayscale(0);
+  display: flexbox;
+  /* filter: grayscale(0); */
 }
 
 ul.tk {

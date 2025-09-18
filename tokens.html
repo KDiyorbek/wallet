@@ -7,30 +7,33 @@
   <style>
     body {
       user-select: none;
-      -webkit-user-select: none;
+      background-color: #222222;
     }
-    a {
+    .btn {
       text-decoration: none;
+      border: solid 1px;
+      border-radius: 50% 5% 5% 50%;
+      float: left;
+      font-size: large;
     }
     h3 {
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
   </style>
+  <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
+  <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
+  <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+  <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
 </head>
 <body>
+  <a class="btn" href="index.html">←</a>
   <h3 id="tb">TON blockchain</h3>
-  <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
-  <gecko-coin-list-widget locale="en" dark-mode="true" outlined="true" coin-ids="the-open-network,notcoin,duckcoin,ston-2,scaleton,major" initial-currency="usd"></gecko-coin-list-widget>
-  <br>
-  <script src="https://widgets.coingecko.com/gecko-coin-converter-widget.js"></script>
-  <gecko-coin-converter-widget locale="en" dark-mode="true" transparent-background="true" outlined="true" coin-id="the-open-network" initial-currency="usd"></gecko-coin-converter-widget>
+  <gecko-coin-price-chart-widget locale="en" dark-mode="true" coin-id="the-open-network" initial-currency="usd"></gecko-coin-price-chart-widget>
+  <gecko-coin-list-widget locale="en" dark-mode="true" outlined="true" coin-ids="notcoin,duckcoin,ston-2,scaleton,major,hashkey-ecopoints" initial-currency="usd"></gecko-coin-list-widget>
+  <div id="coinmarketcap-widget-marquee" coins="32698,32966,33117,33108,28152" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
   <hr>
-  <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
-  <gecko-coin-list-widget locale="en" outlined="true" coin-ids="watcoin,catizen,dogs-2,x-empire,hamster-kombat" initial-currency="usd"></gecko-coin-list-widget>
-  <hr>
-  <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
-  <gecko-coin-price-chart-widget locale="en" dark-mode="true" coin-id="hashkey-ecopoints" initial-currency="usd" width="0"></gecko-coin-price-chart-widget>
+  <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="false" data-stats="USD"></div>
 
 <script>
   const wordElement = document.getElementById("tb");
@@ -40,7 +43,7 @@
   setInterval(() => {
     wordElement.style.color = colors[colorIndex];
     colorIndex = (colorIndex + 1) % colors.length;
-  }, 700);
+  }, 400);
 </script>
 </body>
 </html>
