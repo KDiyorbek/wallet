@@ -6,6 +6,9 @@
 body {
   background-color: white;
   display: flexbox;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -16,11 +19,13 @@ header {
 button {
   float: right;
   margin-top: 4px;
+  border-color: bisque;
+  border-style: dotted;
+  border-radius: 50%;
 }
 
 h2 > a {
   text-align: center;
-  text-decoration: none;
   color: #000000;
 }
 
@@ -45,13 +50,14 @@ hr {
   height: 50px;
 }
 
-.t-image:hover {
+.t-coin > img:hover {
   content: url(./pic/not.webp);
   display: flex;
   margin: auto;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
 }
 
 .okx {
@@ -73,8 +79,10 @@ hr {
 .ok-image:hover {
   content: url(./pic/okx.png);
   display: flex;
-  width: 25%;
-  height: 40px;
+  justify-content: center;
+  margin: auto;
+  width: 155px;
+  height: 55px;
 }
 
 .ok-coin > p {
@@ -94,22 +102,30 @@ hr {
   justify-content: center;
   margin: auto;
   width: 50px;
-  height: 50px;
+  height: 60px;
 }
 
 .meta-image:hover {
   content: url(./pic/metamask.gif);
   display: flexbox;
+  justify-content: center;
   margin: auto;
-  width: 20%;
-  height: 65px;
-  border-radius: 20%;
+  width: 100px;
+  height: 60px;
 }
 
 .bit > img, .tet > img {
   height: 50px;
   width: 50px;
   border-radius: 100%;
+}
+
+.bit > img:hover {
+  transform: rotate(-15deg);
+}
+.tet > img:hover{
+  transform: rotateY(45deg);
+  transition-duration: 1s;
 }
 
 .line {
@@ -123,7 +139,7 @@ hr {
 
 details, .bitcoin-blockchain {
   padding: 4px 20px;
-  width: 100%;
+  width: auto;
 }
 
 details > summary {
@@ -142,7 +158,8 @@ ul li::marker {
 }
 
 .send-bot > a {
-  color: currentColor;
+  color: blue;
+  text-decoration: none;
 }
 
 .t-icon::before {
